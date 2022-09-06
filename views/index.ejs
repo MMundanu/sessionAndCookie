@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <label for="name">Nombre</label>
+            <input type="text" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+            <small><%= locals.errors && errors.name ? errors.name.msg : null %> %> </small>
+        </div>
+        
+        <div>
+            <select name="color" id="">
+               <option value="" selected hidden>seleccione...</option>
+                <option value="gris">gris</option>
+                <option value="verde">verde</option>
+                <option value="rojo">rojo</option>
+                <option value="amarillo">amarillo</option>
+            </select>
+            <small><%= locals.errors && errors.color ? errors.color.msg : null %></small>
+            
+            
+        </div>
+        <div>
+            <label for="email">Ingrese suEmail</label>
+            <input type="email" name="email" value="<%= locals.old && old.email ? old.email : null %>">
+            <small><%= locals.errors && errors.email ? errors.email.msg : null %></small>
+        </div>
+        <div>
+            <label for="edad">Ingrese su edad</label>
+            <input type="number" name="edad" value="<%= locals.old && old.email ? old.email : null %>">
+            <small><%= locals.errors && errors.edad ? errors.edad.msg : null %></small>
+        </div>
+        <div><label for="remember">Recordar</label>
+            <input type="checkbox" name="remember" id="remember">
+        </div>
+        <div>
+          <button type="submit">Enviar</button>
+          <button type="reset">Resetar</button>
+        </div>
+    </form>
+</body>
+</html>

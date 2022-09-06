@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <% if (user.color == 'gris') { %>
+        <link rel="stylesheet" href="/stylesheets/gris.css">
+    <% } else if (user.color == 'rojo') { %>
+        <link rel="stylesheet" href="/stylesheets/rojo.css">
+    <% } else if (user.color == 'verde') { %>
+        <link rel="stylesheet" href="/stylesheets/verde.css">
+    <% } else if (user.color == 'amarillo') { %>
+        <link rel="stylesheet" href="/stylesheets/amarillo.css">
+    <% } %>
+</head>
+<body>
+    <div>
+        <h1><%= user.name %> gracias por visitarnos </h1>
+        <h3>Elegiste el color: <%= user.color %> </h3>
+        <h3>Tu email es: <%= user.email %> </h3>
+        <h3>Tu edad es: <%= user.edad %> </h3>
+    </div>
+    <div>
+        <a href="/edit">Editar</a>
+        <a href="/logut">Salir</a>
+    </div>
+</body>
+</html>
